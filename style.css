@@ -1,0 +1,218 @@
+:root {
+  --pink-yellow-gradient: linear-gradient(90deg, #ec597f, #f48554 90%);
+  --colorful-gradient: linear-gradient(90deg, #ffc170, #ec787f, #8980ed);
+  --link-gradient: linear-gradient(315deg, #abe9cd, #3eadcf 90%);
+  --link-hover-gradient: linear-gradient(316deg, #ffe190 0%, #fa9e8c 74%);
+  --green-gradient: linear-gradient(
+    90deg,
+    rgb(0, 158, 119) 0%,
+    rgb(0, 153, 192) 100%,
+    rgb(2, 127, 255) 200%,
+    rgb(88, 86, 214) 300%,
+    rgb(29, 29, 31) 400%
+  );
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h3 {
+  font-size: 32px;
+  margin: 0;
+}
+
+h2 {
+  font-size: 46px;
+  margin: 0;
+}
+
+.container {
+  max-width: 400px;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about-container {
+  max-width: 700px;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.cursor {
+  width: 30px;
+  height: 30px;
+  background-image: url(images/video-game.png);
+  background-size: cover;
+  z-index: 999;
+  position: fixed;
+}
+
+.waving {
+  animation: wave-animation 3s infinite;
+  transition: all 0.3s ease-in-out;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+
+.contact-link,
+.about-link,
+.linkedin-link,
+.contact-email {
+  display: inline-block;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: transform 0.3s ease 0s, color 0.2s ease 0s;
+}
+
+.linkedin-link {
+  background-image: var(--pink-yellow-gradient);
+}
+
+.contact-link,
+.about-link,
+.contact-email {
+  font-size: 22px;
+  font-weight: bold;
+  background-image: var(--link-gradient);
+  -webkit-font-smoothing: antialiased;
+}
+
+.contact-link:hover,
+.about-link:hover,
+.linkedin-link:hover,
+.contact-email:hover {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  transform: translateX(3px);
+}
+
+.contact-link:hover,
+.about-link:hover,
+.contact-email:hover {
+  background-image: var(--link-hover-gradient);
+}
+
+.linkedin-link:hover {
+  background-image: var(--colorful-gradient);
+}
+
+.contact-link {
+  margin-right: 10px;
+}
+
+.about-header span {
+  font-size: 46px;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  background-image: var(--green-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.about-header span::after {
+  content: "";
+  background-image: var(--link-gradient);
+  opacity: 0.2;
+  position: absolute;
+  left: 12px;
+  bottom: -6px;
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
+  z-index: -1;
+  transition: 0.35s cubic-bezier(0.25, 0.1, 0, 2.05);
+}
+.about-header span:hover:after {
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 100%;
+}
+
+.about-copy {
+  font-size: 18px;
+}
+
+.say-hi {
+  font-size: 46px;
+  background-image: var(--green-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+}
+
+.about-image img {
+  max-width: 250px;
+}
+
+.contact p {
+  margin: 0;
+  font-size: 22px;
+}
+
+.back-link {
+  align-self: flex-start;
+  font-size: 12px;
+  text-decoration: none;
+  border-radius: 980px;
+  padding: 8px 16px;
+  margin-top: 16px;
+  display: inline-block;
+  text-align: center;
+  background: #f5f5f7;
+  color: #1d1d1f;
+  transition: 3s background linear;
+}
+
+.back-link:hover {
+  background: var(--link-gradient);
+  opacity: 0.5;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
