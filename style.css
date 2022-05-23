@@ -55,7 +55,7 @@ h2 {
 
 .about-flex {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -101,6 +101,15 @@ h2 {
   font-weight: bold;
   background-image: var(--link-gradient);
   -webkit-font-smoothing: antialiased;
+}
+
+.about-passions,
+.about-contact {
+  display: inline-block;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: var(--pink-yellow-gradient);
 }
 
 .projects-link:hover,
@@ -201,7 +210,6 @@ hr {
   font-size: 24px;
 }
 
-.about-header span,
 .projects-header span {
   font-size: 46px;
   position: relative;
@@ -212,7 +220,7 @@ hr {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.about-header span::after,
+
 .projects-header span::after {
   content: "";
   background-image: var(--link-gradient);
@@ -225,7 +233,7 @@ hr {
   z-index: -1;
   transition: 0.35s cubic-bezier(0.25, 0.1, 0, 2.05);
 }
-.about-header span:hover:after,
+
 .projects-header span:hover:after {
   left: 0;
   bottom: -2px;
@@ -234,7 +242,8 @@ hr {
 }
 
 .about-copy {
-  font-size: 18px;
+  font-size: 24px;
+  text-align: center;
 }
 
 .say-hi {
@@ -246,8 +255,19 @@ hr {
   margin-bottom: 10px;
 }
 
+.about-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-image: var(--pink-yellow-gradient);
+  width: 250px;
+  height: 250px;
+}
+
 .about-image img {
-  max-width: 250px;
+  max-width: 200px;
+  object-fit: contain;
 }
 
 .contact p {
