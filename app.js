@@ -1,4 +1,5 @@
-const cursor = document.querySelector(".cursor");
+document.addEventListener('DOMContentLoaded', function() {
+  const cursor = document.querySelector(".cursor");
 
 const moveCursor = (e) => {
   const mouseY = e.clientY;
@@ -8,3 +9,5 @@ const moveCursor = (e) => {
 };
 
 window.addEventListener("mousemove", moveCursor);
+})
+
