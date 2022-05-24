@@ -23,6 +23,7 @@
 
 .linkedin-link {
   background-image: var(--pink-yellow-gradient);
+  font-size: 42px;
 }
 
 .linkedin-link:hover {
