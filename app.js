@@ -44,21 +44,20 @@ class TypeWriter {
       // typeSpeed = 400;
     }
 
-    if (window.innerWidth >= 768) {
-      setTimeout(() => this.type(), typeSpeed);
-    } else {
-      this.text = word;
-    }
+    setTimeout(() => this.type(), typeSpeed);
 
     this.element.innerText = this.text;
   }
 }
 
 const passions = document.querySelector(".about-passions");
-const passionsList = new TypeWriter(
-  ["tech", "design", "calligraphy", "desserts", "coding"],
-  passions
-);
+
+if (passions) {
+  const passionsList = new TypeWriter(
+    ["tech", "design", "calligraphy", "desserts", "coding"],
+    passions
+  );
+}
 
 const colors = [
   { startColor: "#ec597f", endColor: "#f48554" },
