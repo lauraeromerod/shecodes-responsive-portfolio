@@ -1,0 +1,162 @@
+:root {
+  --pink-yellow-gradient: linear-gradient(90deg, #ec597f, #f48554 90%);
+  --colorful-gradient: linear-gradient(90deg, #ffc170, #ec787f, #8980ed);
+  --link-gradient: linear-gradient(315deg, #abe9cd, #3eadcf 90%);
+  --link-hover-gradient: linear-gradient(316deg, #ffe190 0%, #fa9e8c 74%);
+  --green-gradient: linear-gradient(
+    90deg,
+    rgb(0, 158, 119) 0%,
+    rgb(0, 153, 192) 100%,
+    rgb(2, 127, 255) 200%,
+    rgb(88, 86, 214) 300%,
+    rgb(29, 29, 31) 400%
+  );
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h3 {
+  font-size: 32px;
+  margin: 0;
+}
+
+h2 {
+  font-size: 46px;
+  margin: 0;
+}
+
+.wrapper {
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.gradient-link {
+  display: inline-block;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: transform 0.3s ease 0s, color 0.2s ease 0s;
+  font-size: 22px;
+  font-weight: bold;
+  background-image: var(--link-gradient);
+  -webkit-font-smoothing: antialiased;
+}
+
+.gradient-link:hover {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  transform: translateX(3px);
+  background-image: var(--link-hover-gradient);
+}
+
+footer {
+  padding: 10px 20px;
+}
+
+footer hr {
+  background-color: #ec597f;
+  max-width: 800px;
+  margin: 0 auto;
+  border: none;
+  height: 1px;
+}
+
+footer .footer--content {
+  max-width: 800px;
+  color: #ec597f;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  letter-spacing: 1px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin: 0 auto;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+
+footer .footer--content--text a {
+  text-decoration: none;
+  color: rgb(0, 158, 119);
+}
+
+footer .footer--content--text a:hover {
+  color: #8980ed;
+}
+
+footer .footer--social {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+footer .footer--social a {
+  text-decoration: none;
+  color: #ec597f;
+  padding-left: 10px;
+}
+
+footer .footer--social a:hover {
+  color: #f48554;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@media (min-width: 1024px) {
+  .cursor {
+    width: 30px;
+    height: 30px;
+    background-image: url(images/video-game.png);
+    background-size: cover;
+    z-index: 999;
+    position: fixed;
+    left: 15px;
+  }
+}
+
+@media (max-width: 500px) {
+  footer p {
+    display: block;
+  }
+}

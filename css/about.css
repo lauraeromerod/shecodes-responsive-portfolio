@@ -1,0 +1,89 @@
+@import "style.css";
+
+.container--about {
+  max-width: 500px;
+  padding: 20px;
+}
+
+.about-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.gradient-text {
+  font-weight: bold;
+  display: inline-block;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: var(--pink-yellow-gradient);
+}
+
+.about-contact {
+  background-image: var(--colorful-gradient);
+}
+
+.about-copy {
+  margin-top: 24px;
+  font-size: 22px;
+  text-align: center;
+}
+
+.say-hi--wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.say-hi {
+  font-size: 46px;
+  background-image: var(--green-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+}
+
+.say-hi--icon {
+  max-width: 80px;
+}
+.about-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-image: var(--pink-yellow-gradient);
+  width: 250px;
+  height: 250px;
+}
+
+.about-image img {
+  max-width: 200px;
+  object-fit: contain;
+}
+
+.contact p {
+  margin: 0;
+  font-size: 22px;
+}
+
+.back-link {
+  align-self: flex-start;
+  font-size: 12px;
+  text-decoration: none;
+  border-radius: 980px;
+  padding: 8px 16px;
+  margin-top: 16px;
+  display: inline-block;
+  text-align: center;
+  background: #f5f5f7;
+  color: #1d1d1f;
+  transition: 3s background linear;
+}
+
+.back-link:hover {
+  background: var(--link-gradient);
+  opacity: 0.5;
+}
