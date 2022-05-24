@@ -63,16 +63,6 @@ h2 {
   justify-content: center;
 }
 
-.cursor {
-  width: 30px;
-  height: 30px;
-  background-image: url(images/video-game.png);
-  background-size: cover;
-  z-index: 999;
-  position: fixed;
-  left: 15px;
-}
-
 .waving {
   animation: wave-animation 3s infinite;
   transition: all 0.3s ease-in-out;
@@ -106,13 +96,20 @@ h2 {
   -webkit-font-smoothing: antialiased;
 }
 
-.about-passions,
-.about-contact {
+.about-passions {
   display: inline-block;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-image: var(--pink-yellow-gradient);
+}
+
+.about-contact {
+  display: inline-block;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: var(--colorful-gradient);
 }
 
 .projects-link:hover,
@@ -236,9 +233,11 @@ h2 {
   transition-property: left;
   transition-duration: 0.3s;
   transition-timing-function: ease-out;
+  z-index: 99;
 }
 
-.project-item-button:hover span:before {
+.project-item-button:hover span:before,
+.project-item-button span:hover:before {
   left: 0;
 }
 
@@ -280,8 +279,14 @@ h2 {
 
 .about-copy {
   margin-top: 24px;
-  font-size: 24px;
+  font-size: 22px;
   text-align: center;
+}
+
+.say-hi--wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
 }
 
 .say-hi {
@@ -293,6 +298,9 @@ h2 {
   margin-bottom: 10px;
 }
 
+.say-hi--icon {
+  max-width: 80px;
+}
 .about-image {
   display: flex;
   justify-content: center;
@@ -413,6 +421,18 @@ footer .footer--social a:hover {
   }
   100% {
     transform: rotate(0deg);
+  }
+}
+
+@media (min-width: 1024px) {
+  .cursor {
+    width: 30px;
+    height: 30px;
+    background-image: url(images/video-game.png);
+    background-size: cover;
+    z-index: 999;
+    position: fixed;
+    left: 15px;
   }
 }
 
